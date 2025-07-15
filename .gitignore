@@ -1,4 +1,4 @@
-mlflow/
+.ruff_cache/
 
 # Python-generated files
 __pycache__/

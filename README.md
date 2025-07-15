@@ -6,12 +6,28 @@ It is composed of an EDA analysis, which includes outlier removal, ML model trai
 
 ## Quick Start
 
-First ensure Docker is running, the run:
+First ensure Docker is running. To run all required container run:
 
 ```bash
-
+docker compose up -d
 ```
 
-to create MLFlow instance
+### Evaluation Metrics
 
+- **RMSE (Root Mean Squared Error)**  
+  Measures average prediction error (penalizes large errors). Lower is better.  
+  $$
+  \text{RMSE} = \sqrt{\frac{1}{n} \sum (\hat{y} - y)^2}
+  $$
 
+- **MAE (Mean Absolute Error)**  
+  Average absolute difference between predicted and actual values. Lower is better — it shows the average size of errors, treating all equally.  
+  $$
+  \text{MAE} = \frac{1}{n} \sum |\hat{y} - y|
+  $$
+
+- **R² (R-squared / Coefficient of Determination)**  
+  Explains how much variance is captured by the model. Closer to 1 is better.  
+  $$
+  R^2 = 1 - \frac{\sum (\hat{y} - y)^2}{\sum (y - \bar{y})^2}
+  $$
