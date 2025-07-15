@@ -9,8 +9,16 @@ It is composed of an EDA analysis, which includes outlier removal, ML model trai
 First ensure Docker is running. To run all required container run:
 
 ```bash
-docker compose up -d
+docker compose up --build
 ```
+
+Services will be available in the following links:
+
+- **Streamlit UI**: [http://localhost:8501](http://localhost:8501)  
+- **MLflow Tracking UI**: [http://localhost:5000](http://localhost:5000)  
+- **MinIO Console**: [http://localhost:9001](http://localhost:9001)  
+  - Username: `minioadmin`  
+  - Password: `minioadmin`
 
 ### Evaluation Metrics
 
